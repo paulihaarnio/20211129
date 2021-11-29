@@ -18,7 +18,11 @@ document.querySelector("button").addEventListener("click", add)
 document.getElementById("show").addEventListener("click", näytä)
 
 function näytä(){
-    
+    cources.forEach(cource=>{
+        let li=document.createElement("li")
+        li.textContent="Kurssin nimi: "+cource.cource_name+", "+cource.studentNum+" osallistujaa"
+        document.querySelector("ul").appendChild(li)
+    })
 }
 
 
